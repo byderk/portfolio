@@ -77,7 +77,7 @@ const renderByProject = (project, graph) => (
         onClick={() => (setShowGraph(true), setTool(1))}>Graphics Design</button>
         <span>|</span>
         <button className={`opacity-100 hover:opacity-80 transition duration-150 ${showGraph && 'opacity-50'}`} 
-        onClick={() => (setShowGraph(false), setTool(1))}>Web Development</button>
+        onClick={() => (setShowGraph(false), setTool(1))}>Web Dev</button>
       </div>
       { showGraph ? renderProjects(graphicProj, true) : renderProjects(webProj, false) }
       </div>
