@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import { BrowserRouter as Router, Route, Routes} from "react-router-dom"
 import { BiSolidDownload } from "react-icons/bi";
+import DeviceHeight from './components/DeviceHeight';
 import Home from './components/Home'
 import Info from './components/Info'
 import Projects from './components/Projects'
@@ -20,6 +21,7 @@ function App() {
   const persistDarkMode = localStorage.getItem("dark_mode");
   const persistSystemMode = localStorage.getItem("system_mode") === "true" ? true : false;
   const mode = persistSystemMode ? getSystemTheme() : persistDarkMode === "true" ? true : false;
+  const deviceHeight = DeviceHeight();
 
   const [isOpen, setIsOpen] = useState(false);
   const [album, setAlbum] = useState(null);
@@ -61,7 +63,7 @@ function App() {
   }, [darkmode, byTheme])
 
   return (
-    <div id="App" className={`w-full min-h-screen p-4 pr-8 flex flex-col overflow-hidden ${darkmode ? 'darkMode' : "lightMode"}`}>
+    <div id="App" className={`w-full ${deviceHeight < 550 ? 'min-h-[590px]' : 'min-h-screen'} p-4 pr-8 flex flex-col overflow-hidden ${darkmode ? 'darkMode' : "lightMode"}`}>
       <Router>
         <div className="w-full max-w-7xl mx-auto relative flex-grow border border-[#979797] p-6 duration-500 transition-all">
           <h1 className='absolute left-6 bottom-3 flex flex-col items-start opacity-0 font-black uppercase text-7xl md:text-8xl lg:text-9xl md:opacity-50 md:z-40'>
