@@ -26,7 +26,7 @@ const webProj = [
       id: 1, 
       name: 'Denu',
       url: 'https://denu.v3.veryapp.info/',
-      description: 'A digital menu, also known as an electronic menu or e-menu, serves the same purpose as traditional paper menu but presented in digital format.',
+      description: 'A digital menu, serves the same purpose as traditional paper menu but presented in digital format.',
       images: [
         { id: 1, src: cartdenu},
         { id: 2, src: mockupdenu},
@@ -45,7 +45,7 @@ const webProj = [
     { 
       id: 2, 
       name: 'TR-AI',
-      description: '',
+      description: 'Integrates various artificial intelligence applications into one user-friendly website.',
       images: [
         { id: 1, src: mockuptrai},
         { id: 2, src: hometrai},
@@ -85,7 +85,7 @@ const webProj = [
       id: 4, 
       name: 'BANTENYA',
       url: '',
-      description: 'Landing page for Bantenya ',
+      description: 'Web solution designed to elevate the online presence and user experience for the company, Bantenya.',
       images: [
         { id: 1, src: mockupbatenya},
         { id: 2, src: adobebatenya},

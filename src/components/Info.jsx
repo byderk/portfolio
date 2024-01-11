@@ -30,7 +30,7 @@ const Info = () => {
         </p>
 
         <div className='my-2'>
-          <p>For additional details about myself, feel free to download my CV</p><div className='inline-block md:hidden'><span className='flex gap-1 cursor-pointer'><BiSolidFilePdf onClick={() => setIsOpen(true)} size={16} /> here.</span></div>
+          <p>For additional details about myself, feel free to download my CV <span className='inline-flex gap-1 cursor-pointer md:hidden'><BiSolidFilePdf onClick={() => setIsOpen(true)} size={16} /> here.</span></p>
         </div>
       </div>
       <div className='flex flex-col items-end'>

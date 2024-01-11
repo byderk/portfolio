@@ -23,8 +23,8 @@ const Carousel = ({ setAlbum, album, isGraphic }) => {
   };
 
   return (
-    <div className='w-full min-h-screen flex items-center fixed inset-0 bg-black/25 px-8 z-50'>
-      <div className='w-full h-72 mx-auto relative group sm:max-w-sm md:max-w-lg md:h-96'>
+    <div className='w-full min-h-screen flex items-center fixed inset-0 bg-black/25 px-8 py-4 z-50'>
+      <div className='w-full max-w-sm h-72 mx-auto relative group md:max-w-lg md:h-96'>
         <div
           style={{ backgroundImage: `url(${images[currentIndex].src})` }}
           className={`relative h-full rounded-md bg-center bg-no-repeat duration-500 group ${isGraphic ? 'bg-contain' : 'bg-cover'}`}
