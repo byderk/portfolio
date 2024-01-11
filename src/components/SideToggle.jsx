@@ -1,7 +1,7 @@
 import React from 'react'
 
 const SideToggle = ({darkmode, byTheme, setTheme, setModeDark, setModeLight}) => {
-
+  console.log(darkmode);
   return (
     <div className="flex items-center gap-8 uppercase">
       <div className="flex items-center gap-2 group">
@@ -9,7 +9,7 @@ const SideToggle = ({darkmode, byTheme, setTheme, setModeDark, setModeLight}) =>
           <div className='absolute text-[8px] top-[17px] opacity-0 group-hover:opacity-100 transtion duration-200'>Turn light mode</div>
       </div>
       <div className="flex items-center gap-2 group">
-          <input type='button' name='dark' onClick={setModeDark} className={`cursor-pointer rounded-none w-3 h-3 border focus:outline-none transition duration-150 ${byTheme ? (darkmode ? 'bg-bg-dark' : 'bg-bg-light border-bg-dark') : !darkmode && 'bg-bg-light border-bg-dark'}`}/>Dark
+          <input type='button' name='dark' onClick={setModeDark} className={`cursor-pointer rounded-none w-3 h-3 border focus:outline-none transition duration-150 ${byTheme ? (darkmode ? 'bg-bg-dark' : 'bg-bg-light border-bg-dark') : darkmode ? 'bg-bg-light' : 'border-bg-dark'}`}/>Dark
           <div className='absolute text-[9px] top-[17px] opacity-0 group-hover:opacity-100 transtion duration-200'>Turn dark mode</div>
       </div>
       <div className="flex items-center gap-2 group">
