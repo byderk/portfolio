@@ -25,6 +25,8 @@ const webProj = [
     { 
       id: 1, 
       name: 'Denu',
+      url: 'https://denu.v3.veryapp.info/',
+      description: 'A digital menu, also known as an electronic menu or e-menu, serves the same purpose as traditional paper menu but presented in digital format.',
       images: [
         { id: 1, src: cartdenu},
         { id: 2, src: mockupdenu},
@@ -43,6 +45,7 @@ const webProj = [
     { 
       id: 2, 
       name: 'TR-AI',
+      description: '',
       images: [
         { id: 1, src: mockuptrai},
         { id: 2, src: hometrai},
@@ -61,6 +64,8 @@ const webProj = [
     { 
       id: 3, 
       name: 'MEIJI',
+      url: 'https://meiji-pharmaceutical-university.veryapp.info/',
+      description: 'Serves as a enrollment system and centralized hub for students and staff to stay informed.',
       images: [
         { id: 1, src: resumemeiji},
         { id: 2, src: mockupmeiji},
@@ -79,6 +84,8 @@ const webProj = [
     { 
       id: 4, 
       name: 'BANTENYA',
+      url: '',
+      description: 'Landing page for Bantenya ',
       images: [
         { id: 1, src: mockupbatenya},
         { id: 2, src: adobebatenya},
@@ -94,6 +101,7 @@ const webProj = [
     { 
       id: 5, 
       name: 'CLOUDY',
+      description: 'Weather application that provides current and forecasted weather from Api',
       images: [
         { id: 1, src: mockupcloudy},
         { id: 2, src: homecloudy},

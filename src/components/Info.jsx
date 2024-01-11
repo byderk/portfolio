@@ -18,8 +18,8 @@ const Info = () => {
   return (
     <div className='w-full ml-auto p-6 sm:w-3/4 md:w-1/2 text-sm md:text-base'>
       <DownloadResume isOpen={isOpen} openModal={openModal} closeModal={closeModal} />
-      <div className='flex flex-col gap-1'>
-        <h1 className='font-medium'>About me</h1>
+      <div className='flex flex-col gap-2'>
+        <h1 className='text-lg font-medium'>About me</h1>
         <p>
           Hey there, thanks first of all thank you for visiting my portfolio. I'm a web developer with a 
           background in computer engineering. 
@@ -29,9 +29,9 @@ const Info = () => {
           Recently, I've begun a fitness journey to maintain a healthier lifestyle.
         </p>
 
-        <p className='my-2'>
-          For additional details about myself, feel free to download my CV <div className='inline-block md:hidden'><span className='flex gap-1 cursor-pointer'><BiSolidFilePdf onClick={() => setIsOpen(true)} size={16} /> here.</span></div>
-        </p>
+        <div className='my-2'>
+          <p>For additional details about myself, feel free to download my CV</p><div className='inline-block md:hidden'><span className='flex gap-1 cursor-pointer'><BiSolidFilePdf onClick={() => setIsOpen(true)} size={16} /> here.</span></div>
+        </div>
       </div>
       <div className='flex flex-col items-end'>
         <button onClick={() => setShowDisclaimer(!showDisclaimer)} className='flex items-center transition duration-300'>

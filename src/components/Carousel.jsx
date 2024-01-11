@@ -5,7 +5,7 @@ import { GoSquareFill } from "react-icons/go";
 const Carousel = ({ setAlbum, album, isGraphic }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const images = album.images;
-  
+  const url = album.url;
   const prevSlide = () => {
     const isFirstSlide = currentIndex === 0;
     const newIndex = isFirstSlide ? images.length - 1 : currentIndex - 1;
@@ -27,8 +27,15 @@ const Carousel = ({ setAlbum, album, isGraphic }) => {
       <div className='w-full h-72 mx-auto relative group sm:max-w-sm md:max-w-lg md:h-96'>
         <div
           style={{ backgroundImage: `url(${images[currentIndex].src})` }}
-          className={`h-full rounded-md bg-center bg-no-repeat duration-500 group ${isGraphic ? 'bg-contain' : 'bg-cover'}`}
+          className={`relative h-full rounded-md bg-center bg-no-repeat duration-500 group ${isGraphic ? 'bg-contain' : 'bg-cover'}`}
         >
+          <div className='absolute bottom-0 left-0 text-text-dark bg-white/80 shadow-md px-2 py-1'>
+            <h1 className='text-md font-medium'>{album.name}</h1>
+            <p className='text-sm'>{album.description}</p>
+          </div>
+          {
+            url && <a href={url} target='_blank' className='absolute top-2 left-2 text-sm bg-white text-bg-dark shadow-sm px-2 py-1 rounded-sm hover:scale-95 transition duration-150 active:scale-95'>Visit website</a>
+          }
           <div onClick={() => setAlbum(null)} className='absolute top-8 right-4 -translate-x-0 translate-y-[-50%] text-2xl cursor-pointer transition duration-300 hover:scale-110'>
             <BsX color='grey' />
           </div>

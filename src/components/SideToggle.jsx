@@ -1,7 +1,7 @@
 import React from 'react'
 
 const SideToggle = ({darkmode, byTheme, setTheme, setModeDark, setModeLight}) => {
-  console.log(darkmode);
+
   return (
     <div className="flex items-center gap-8 uppercase">
       <div className="flex items-center gap-2 group">
